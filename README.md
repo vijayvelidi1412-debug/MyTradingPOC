@@ -60,3 +60,51 @@ Task Scheduler	Celery + Celery Beat
 Authentication	JWT (djangorestframework-simplejwt)
 Admin Panel	Django Admin
 Deployment	Docker & Docker Compose
+
+
+Key Workflows
+Trade Placement Workflow
+User places trade (Mon-Fri, 9-4 PM)
+System validates trading hours
+Trade created with open status
+Position updated/created
+User P&L updated in real-time
+Settlement Workflow
+Saturday 10 PM: Settlement task triggers
+Get all user positions for the week
+Close positions at Friday EOD price
+Calculate P&L
+Update user balance
+Generate credit note
+Create cash credit entry
+Audit log recorded
+Rollover Workflow
+Before Settlement: User requests rollover
+Admin approves via dashboard
+Sunday midnight: Processing task runs
+New positions created with Friday EOD price
+Monday: Positions active in new week
+
+
+All Features Complete
+✨ Admin Controls
+
+Create users only
+Verify KYC
+View all transactions
+Approve/reject settlements
+Approve/reject rollovers
+✨ User Features
+
+Place trades Mon-Fri
+View open positions
+Request rollovers
+Track cash credits
+View trading history
+✨ Automated Processes
+
+Weekly settlements
+Position rollovers
+Price updates
+Credit note generation
+
