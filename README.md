@@ -47,3 +47,16 @@ MyTradingPOC/
 ├── docker-compose.yml        # Docker orchestration
 ├── Dockerfile                # Container image
 └── README.md                 # Documentation
+
+
+
+**Technology Stack**
+Component	Technology
+Backend Framework	Django 4.2
+REST API	Django REST Framework
+Database	PostgreSQL 15
+Cache/Queue	Redis 7
+Task Scheduler	Celery + Celery Beat
+Authentication	JWT (djangorestframework-simplejwt)
+Admin Panel	Django Admin
+Deployment	Docker & Docker Compose
